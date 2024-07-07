@@ -11,7 +11,6 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name="hotel")
 public class Hotel {
 
     @Id
@@ -22,7 +21,5 @@ public class Hotel {
     private String location;
 
     private String about;
-
-
 
 }

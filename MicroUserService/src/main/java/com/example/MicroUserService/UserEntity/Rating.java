@@ -1,7 +1,6 @@
 package com.example.MicroUserService.UserEntity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -26,5 +25,6 @@ public class Rating {
 
     private String feedback;
 
-
+    @Transient
+    private Hotel hotel;
 }

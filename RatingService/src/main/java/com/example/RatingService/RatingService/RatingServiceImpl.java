@@ -64,7 +64,7 @@ public class RatingServiceImpl implements RatingService{
         AggregateIterable<Document> result = collection.aggregate(Arrays.asList(
                 new Document("$match", new Document("$or",
                         Arrays.asList(new Document("feedback", new Document("$regex", text).append("$options", "i"))))),
-                new Document("$sort", new Document("rating", -1L)), new Document("$limit", 6L)));
+                new Document("$sort", new Document("rating", -1L)), new Document("$limit", 5L)));
 
         result.forEach(doc -> posts.add(converter.read(Rating.class, doc)));
 

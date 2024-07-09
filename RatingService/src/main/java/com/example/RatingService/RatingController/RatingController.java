@@ -34,5 +34,9 @@ private RatingService ratingService;
     public ResponseEntity<List<Rating>> getAllRatingsByHotelId(@PathVariable String hotelid){
         return ResponseEntity.ok(ratingService.getRatingsByHotelId(hotelid));
     }
+    @GetMapping("/search/{text}")
+    public ResponseEntity<List<Rating>> getAllRatingsBySearch(@PathVariable String text){
+        return ResponseEntity.ok(ratingService.searchRatings(text));
+    }
 
 }

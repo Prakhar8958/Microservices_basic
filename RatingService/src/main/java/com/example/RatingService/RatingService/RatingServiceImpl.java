@@ -70,4 +70,9 @@ public class RatingServiceImpl implements RatingService{
 
         return posts;
     }
+
+    @Override
+    public void deleteRating(String ratingid) {
+    ratingRepo.deleteById(ratingid);
+    }
 }

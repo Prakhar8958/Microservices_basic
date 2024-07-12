@@ -29,4 +29,9 @@ public class HotelServiceImpl implements HotelService{
     public Hotel getById(String id) {
         return hotelrepo.findById(id).orElseThrow(()-> new ResourceNotFoundException("NO hoetls found By this Id"));
     }
+
+    @Override
+    public void deleteById(String id) {
+        hotelrepo.deleteById(id);
+    }
 }

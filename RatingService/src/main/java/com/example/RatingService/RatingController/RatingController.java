@@ -38,5 +38,9 @@ private RatingService ratingService;
     public ResponseEntity<List<Rating>> getAllRatingsBySearch(@PathVariable String text){
         return ResponseEntity.ok(ratingService.searchRatings(text));
     }
+    @GetMapping("/deleteById/{ratingid}")
+    public ResponseEntity<RatingService> deleteById(@PathVariable String ratingid){
+        return ResponseEntity.status(HttpStatus.OK).body(ratingService);
+   }
 
 }

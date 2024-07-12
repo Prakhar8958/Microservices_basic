@@ -41,4 +41,9 @@ public class Controller {
         List<User> allUser=userService.getAllUser();
         return ResponseEntity.ok(allUser);
     }
+
+    @GetMapping("/deleteById/{userid}")
+    public ResponseEntity<UserService> deleteUser(@PathVariable String userId){
+        return ResponseEntity.status(HttpStatus.OK).body(userService);
+    }
 }

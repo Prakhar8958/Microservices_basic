@@ -70,4 +70,10 @@ public class UserServiceImpl implements UserService{
         user.setRatings(ratings);
         return user;
     }
+
+    @Override
+    public void deleteUser(String userId) {
+        userrepo.deleteById(userId);
+    }
+
 }

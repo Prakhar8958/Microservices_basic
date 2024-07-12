@@ -35,6 +35,9 @@ public class HotelController {
         return ResponseEntity.status(HttpStatus.OK).body(hotelService.getAll());
     }
 
-
+    @GetMapping("/deleteById/{hotelid}")
+    public ResponseEntity<HotelService> deleteHotel(@PathVariable String hotelid){
+        return ResponseEntity.status(HttpStatus.OK).body(hotelService);
+    }
 
 }
